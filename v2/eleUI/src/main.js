@@ -1,7 +1,7 @@
-import Vue from 'vue'
-import App from './App.vue'
-import VueRouter from 'vue-router'
-import VueResource from 'vue-resource'
+import Vue from 'vue';
+import App from './App.vue';
+import VueRouter from 'vue-router';
+import VueResource from 'vue-resource';
 
 //开启debug模式
 Vue.config.debug = true;
@@ -28,14 +28,14 @@ const router = new VueRouter({
             component: email
         }
     ]
-})
+});
 
 // 现在我们可以启动应用了！
 // 路由器会创建一个 App 实例，并且挂载到选择符 #app 匹配的元素上。
 const app = new Vue({
     router: router,
     render: h => h(App)
-}).$mount('#app')
+}).$mount('#app');
 
 // new Vue({
 //     el: '#app',

@@ -25,16 +25,16 @@
 </template>
 
 <script>
-    import name from './component/name.vue'
+    import name from './component/name.vue';
     export default {
         name: 'app',
         data () {
             return {
                 msg: 'Welcome to Your Vue.js App'
-            }
+            };
         },
         components: {name}
-    }
+    };
 </script>
 
 <style lang="scss">

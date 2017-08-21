@@ -12,9 +12,9 @@
             return {
                 author: 'chengshuai.tj@gmail.com',
                 articles: [],
-            }
+            };
         }
-    }
+    };
 </script>
 
 <style>

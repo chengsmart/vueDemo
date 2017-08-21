@@ -9,10 +9,10 @@
     export default {
         data () {
             return {
-                name: "Smart"
-            }
+                name: 'Smart'
+            };
         }
-    }
+    };
 </script>
 
 <style>
