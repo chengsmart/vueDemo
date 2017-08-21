@@ -2,6 +2,7 @@ import Vue from 'vue';
 import App from './App.vue';
 import VueRouter from 'vue-router';
 import VueResource from 'vue-resource';
+import axios from 'axios';
 
 //开启debug模式
 Vue.config.debug = true;
@@ -9,6 +10,7 @@ Vue.config.debug = true;
 Vue.use(VueRouter);
 Vue.use(VueResource);
 
+Vue.prototype.$axios = axios;
 
 const First = { template: '<div><h2>我是第 1 个子页面</h2></div>' };
 import email from './component/email.vue';
