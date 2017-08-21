@@ -7,7 +7,6 @@
     "scripts": {
         "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot",
         "build": "cross-env NODE_ENV=production webpack --progress --hide-modules",
-        "postinstall": "cp .hooks/* .git/hooks/",
         "lint": "eslint --ext .js,.vue src",
         "fix": "eslint --fix .js,.vue src"
     },
