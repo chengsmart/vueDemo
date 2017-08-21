@@ -11,7 +11,7 @@ Vue.use(VueResource);
 
 
 const First = { template: '<div><h2>我是第 1 个子页面</h2></div>' };
-import secondcomponent from './component/secondcomponent.vue'
+import email from './component/email.vue'
 
 // 创建一个路由器实例
 // 并且配置路由规则
@@ -25,7 +25,7 @@ const router = new VueRouter({
         },
         {
             path: '/second',
-            component: secondcomponent
+            component: email
         }
     ]
 })

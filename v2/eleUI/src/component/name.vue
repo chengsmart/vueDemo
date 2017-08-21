@@ -1,7 +1,7 @@
 <template>
-    <div id="democomponent">
+    <div id="name">
         <h1>I am a title.</h1>
-        <a> my name is {{ author }} </a>
+        <a> my name is {{ name }} </a>
     </div>
 </template>
 
@@ -9,7 +9,7 @@
     export default {
         data () {
             return {
-                author: "Smart"
+                name: "Smart"
             }
         }
     }

@@ -2,7 +2,7 @@
     <div id="app">
         <img src="./assets/logo.png">
         <h1>{{ msg }}</h1>
-        <democomponent></democomponent>
+        <name></name>
         <h2>Essential Links</h2>
         <ul>
             <li><a href="https://vuejs.org" target="_blank">Core Docs</a></li>
@@ -25,7 +25,7 @@
 </template>
 
 <script>
-    import democomponent from './component/democomponent.vue'
+    import name from './component/name.vue'
     export default {
         name: 'app',
         data () {
@@ -33,7 +33,7 @@
                 msg: 'Welcome to Your Vue.js App'
             }
         },
-        components: {democomponent}
+        components: {name}
     }
 </script>
 
