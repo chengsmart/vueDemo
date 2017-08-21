@@ -3,7 +3,7 @@
         <img src="./assets/logo.png">
         <h1>{{title}}</h1>
         <name></name>
-        <router-link to="/first">No.1</router-link>
+        <router-link to="/page1">No.1</router-link>
         <router-link to="/second">No.2</router-link>
         <router-view class="view"></router-view>
     </div>

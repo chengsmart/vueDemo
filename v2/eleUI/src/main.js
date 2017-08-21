@@ -1,18 +1,21 @@
 import Vue from 'vue';
 import App from './App.vue';
 import VueRouter from 'vue-router';
-import VueResource from 'vue-resource';
 import axios from 'axios';
+import Element from 'element-ui';
+import 'element-ui/lib/theme-default/index.css';
 
 //开启debug模式
 Vue.config.debug = true;
 
 Vue.use(VueRouter);
-Vue.use(VueResource);
+Vue.use(Element);
 
 Vue.prototype.$axios = axios;
 
-const First = { template: '<div><h2>我是第 1 个子页面</h2></div>' };
+// TODO 使用内联模版在修改webpack配置之后报错，暂时修改为import
+const First = { template: '<div><h2>我是第 一 个子页面</h2></div>' };
+import page1 from './component/page1.vue';
 import email from './component/email.vue';
 
 // 创建一个路由器实例
@@ -22,8 +25,8 @@ const router = new VueRouter({
     base: __dirname,
     routes: [
         {
-            path: '/first',
-            component: First
+            path: '/page1',
+            component: page1
         },
         {
             path: '/second',

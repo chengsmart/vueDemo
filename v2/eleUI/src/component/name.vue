@@ -1,12 +1,14 @@
 <template>
     <div id="name">
-        <h1>{{name}} 测试 内联页面</h1>
-        <ul class="list">
-            以下是ajax数据
-            <li v-for="article in articles">
+        <h1>{{name}} 测试 内联页面 ajax</h1>
+        <el-card class="box-card">
+            <div slot="header" class="clearfix">
+                <h1>豆瓣电影排行榜</h1>
+            </div>
+            <div v-for="article in articles" class="text item">
                 {{article.title}}
-            </li>
-        </ul>
+      </div>
+        </el-card>
     </div>
 </template>
 
@@ -34,6 +36,4 @@
 </script>
 
 <style>
-    .list { background-color: #f60; color: #fff;}
-    .list > li { display: block; width: 100%; color: #666; background-color: #fff; font-size: 12px; padding: 3px; margin: 1px 0;}
 </style>
