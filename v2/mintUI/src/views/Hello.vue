@@ -5,7 +5,7 @@
         <img src="../assets/logo.png">
         <h1>{{ msg }}</h1>
         <h2>Essential Links</h2>
-        <router-link to="/detail">更多</router-link>
+        <span v-for="n in 10">{{ n }} </span>
         <router-link to="/detail">
             <mt-button icon="loading">更多</mt-button>
         </router-link>

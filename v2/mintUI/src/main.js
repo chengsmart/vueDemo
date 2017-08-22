@@ -6,6 +6,7 @@ import router from './router'
 
 import MintUI from 'mint-ui'
 import 'mint-ui/lib/style.css'
+import 'vue2-animate/dist/vue2-animate.css'
 
 Vue.use(MintUI)
 
