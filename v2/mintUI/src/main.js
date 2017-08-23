@@ -3,13 +3,14 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import axios from 'axios';
 
 import MintUI from 'mint-ui'
 import 'mint-ui/lib/style.css'
 import 'vue2-animate/dist/vue2-animate.css'
 
 Vue.use(MintUI)
-
+Vue.prototype.$axios = axios;
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */

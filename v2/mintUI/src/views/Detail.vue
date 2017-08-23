@@ -7,14 +7,9 @@
             <mt-button icon="more" slot="right"></mt-button>
         </mt-header>
 
-        <router-link to="/list">
-            <mt-button icon="home">列表</mt-button>
-        </router-link>
-        <ul>
-            <li v-for="item in lists">
-                {{ item.name }}
-            </li>
-        </ul>
+        <mt-cell title="列表页面" to="/list" is-link value="查看列表"></mt-cell>
+        <mt-cell :title="item.title" v-for="item in articles" class="item"></mt-cell>
+
     </div>
 </template>
 
@@ -24,19 +19,32 @@
         data () {
             return {
                 title: '详情页面',
-                lists:[{
-                    name:'a'
-                },{
-                    name:'b'
-                },{
-                    name:'c'
-                }]
+                articles:[]
             }
+        },
+        methods:{
+            getVideoList : function () {
+                var that = this;
+                this.$axios.get('https://api.douban.com/v2/movie/top250?count=10')
+                    .then(function (response) {
+                        that.$indicator.close();
+                        that.articles = response.data.subjects;
+                    })
+                    .catch(function (error) {
+                        console.log(error);
+                    });
+            }
+        },
+        mounted:function () {
+            this.$indicator.open({
+                spinnerType:'double-bounce'
+            });
+            this.getVideoList()
         }
     }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-    .detail { text-align: center;}
+    .item { text-align: center;}
 </style>

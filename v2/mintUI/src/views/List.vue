@@ -6,7 +6,7 @@
             </router-link>
             <mt-button icon="more" slot="right"></mt-button>
         </mt-header>
-        <mt-cell title="列表页面" to="/detail" is-link value="查看列表"></mt-cell>
+        <mt-cell title="详情页面" to="/detail" is-link value="第二个子页面"></mt-cell>
         <mt-field label="用户名" placeholder="请输入用户名" v-model="username"></mt-field>
         <mt-button icon="success" @click="addItem()">添加</mt-button>
         <mt-button icon="field-warning" @click="cleanAll()">清除</mt-button>
