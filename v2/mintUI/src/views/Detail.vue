@@ -1,5 +1,5 @@
 <template>
-    <div class="detail">
+    <div class="detail has-navbar">
         <mt-header fixed :title="title">
             <router-link to="/" slot="left">
                 <mt-button icon="back">返回</mt-button>
@@ -38,5 +38,5 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
+    .detail { text-align: center;}
 </style>
