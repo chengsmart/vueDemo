@@ -23,15 +23,15 @@
             }
         },
         methods:{
-            getVideoList : function () {
-                var that = this;
+            getVideoList () {
+                let that = this;
                 this.$axios.get('https://api.douban.com/v2/movie/top250?count=10')
                     .then(function (response) {
                         that.$indicator.close();
                         that.articles = response.data.subjects;
                     })
                     .catch(function (error) {
-                        console.log(error);
+                        window.console.log(error);
                     });
             }
         },
