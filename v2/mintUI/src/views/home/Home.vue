@@ -10,7 +10,7 @@
             <mt-button>输入页</mt-button>
         </router-link>
 
-        <router-link to="/list">
+        <router-link to="/login">
             <mt-button>登录页面开发中</mt-button>
         </router-link>
         <router-link to="/list">

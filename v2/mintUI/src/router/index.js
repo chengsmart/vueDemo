@@ -4,6 +4,7 @@ import HomeTab from '@/views/home/HomeTab'
 import Hello from '@/views/Hello'
 import Detail from '@/views/Detail'
 import List from '@/views/List'
+import Login from '@/views/Login'
 
 Vue.use(Router)
 
@@ -28,6 +29,11 @@ export default new Router({
             path: '/list',
             name: 'List',
             component: List
+        },
+        {
+            path: '/login',
+            name: 'Login',
+            component: Login
         }
     ]
 })
