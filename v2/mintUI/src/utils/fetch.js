@@ -7,6 +7,7 @@
 import axios from 'axios'
 import { getToken } from '@/utils/auth'
 import { removeToken } from '@/utils/auth'
+import { Toast,Messagebox } from 'mint-ui'
 
 // 创建axios实例
 const service = axios.create({
@@ -16,6 +17,7 @@ const service = axios.create({
 
 // request拦截器
 service.interceptors.request.use(config => {
+    // TODO 判断是否需要登录权限
     if (getToken()) {
         config.headers['Authorization'] = getToken() // 让每个请求携带自定义token 请根据实际情况自行修改
     }
@@ -32,11 +34,11 @@ service.interceptors.response.use(
          // code为非0是抛错
         const res = response.data
         if (res.errCode) {
-            this.$toast(res.message)
+            Toast(res.message)
             
             // 50008:非法的token; 50012:其他客户端登录了;  50014:Token 过期了;
             if (res.errCode === 401) {
-                this.$messagebox.confirm('你已被登出，可以取消继续留在该页面，或者重新登录', '确定登出', {
+                Messagebox.confirm('你已被登出，可以取消继续留在该页面，或者重新登录', '确定登出', {
                     confirmButtonText: '重新登录',
                     cancelButtonText: '取消',
                     type: 'warning' // TODO mintUI中是否有这个参数？文档没有，待测试
@@ -52,9 +54,8 @@ service.interceptors.response.use(
         }
     },
     error => {
-        // TODO 添加对门特401的控制
         console.log('err' + error)// for debug
-        this.$toast({
+        Toast({
             message: error.message,
             type: 'error',
             duration: 5 * 1000

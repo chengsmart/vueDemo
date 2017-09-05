@@ -1,20 +1,19 @@
 <template>
     <div class="home">
-        <mt-header fixed :title="title"></mt-header>
         <img src="../../assets/logo.png">
         <h1>{{ msg }}</h1>
         <router-link to="/hello">
-            <mt-button>欢迎页</mt-button>
+            <mt-button size="large">欢迎页</mt-button>
         </router-link>
         <router-link to="/list">
-            <mt-button>输入页</mt-button>
+            <mt-button size="large">输入页</mt-button>
         </router-link>
 
         <router-link to="/login">
-            <mt-button>登录页面开发中</mt-button>
+            <mt-button size="large">登录页面开发中</mt-button>
         </router-link>
         <router-link to="/list">
-            <mt-button>ajax测试</mt-button>
+            <mt-button size="large">ajax测试</mt-button>
         </router-link>
     </div>
 </template>
