@@ -70,14 +70,6 @@ export function login(username, password,role) {
     })
 }
 
-export function getInfo(token) {
-    return fetch({
-        url: '/user/info',
-        method: 'get',
-        params: { token }
-    })
-}
-
 export function logout() {
     return fetch({
         url: '/user/logout',

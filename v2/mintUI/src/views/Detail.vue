@@ -7,39 +7,38 @@
             <mt-button icon="more" slot="right"></mt-button>
         </mt-header>
 
-        <mt-cell title="列表页面" to="/list" is-link value="查看列表"></mt-cell>
-        <mt-cell :title="item.title" v-for="item in articles" class="item"></mt-cell>
+        <mt-cell title="姓名" :value="info.name"></mt-cell>
+        <mt-cell title="社保卡号" :value="info.sin"></mt-cell>
+        <mt-cell title="社保卡号" :value="info.mobileNumber"></mt-cell>
 
     </div>
 </template>
 
 <script>
+    import { getUserInfo } from '@/api/personal'
     export default {
         name: 'detail',
         data () {
             return {
                 title: '详情页面',
-                articles:[]
+                info:{}
             }
         },
         methods:{
-            getVideoList () {
-                let that = this;
-                this.$axios.get('https://api.douban.com/v2/movie/top250?count=10')
-                    .then(function (response) {
-                        that.$indicator.close();
-                        that.articles = response.data.subjects;
-                    })
-                    .catch(function (error) {
-                        window.console.log(error);
-                    });
-            }
+
         },
         mounted:function () {
             this.$indicator.open({
                 spinnerType:'double-bounce'
             });
-            this.getVideoList()
+            getUserInfo()
+                .then(data => {
+                    // 模拟1秒延迟
+                    setTimeout( e => {
+                        this.info = data
+                        this.$indicator.close();
+                    },1000)
+                })
         }
     }
 </script>

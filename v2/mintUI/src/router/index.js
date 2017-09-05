@@ -11,6 +11,10 @@ Vue.use(Router)
 export default new Router({
     routes: [
         {
+            path: '*',
+            redirect: '/'
+        },
+        {
             path: '/',
             name: 'HomeTab',
             component: HomeTab
@@ -23,7 +27,11 @@ export default new Router({
         {
             path: '/detail',
             name: 'Detail',
-            component: Detail
+            meta:{
+                needAuth:true
+            },
+            component: Detail,
+            needAuth:true
         },
         {
             path: '/list',
