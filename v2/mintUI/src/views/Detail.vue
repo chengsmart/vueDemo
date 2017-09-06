@@ -28,16 +28,9 @@
 
         },
         mounted:function () {
-            this.$indicator.open({
-                spinnerType:'double-bounce'
-            });
             getUserInfo()
                 .then(data => {
-                    // 模拟1秒延迟
-                    setTimeout( e => {
-                        this.info = data
-                        this.$indicator.close();
-                    },1000)
+                    this.info = data
                 })
         }
     }

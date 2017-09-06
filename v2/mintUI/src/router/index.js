@@ -20,11 +20,6 @@ export default new Router({
             component: HomeTab
         },
         {
-            path: '/hello',
-            name: 'Hello',
-            component: Hello
-        },
-        {
             path: '/detail',
             name: 'Detail',
             meta:{
@@ -32,6 +27,11 @@ export default new Router({
             },
             component: Detail,
             needAuth:true
+        },
+        {
+            path: '/hello',
+            name: 'Hello',
+            component: Hello
         },
         {
             path: '/list',
