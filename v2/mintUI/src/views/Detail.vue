@@ -11,11 +11,13 @@
         <mt-cell title="社保卡号" :value="info.sin"></mt-cell>
         <mt-cell title="社保卡号" :value="info.mobileNumber"></mt-cell>
 
+        <mt-button size="large" @click="logout()">登出</mt-button>
     </div>
 </template>
 
 <script>
     import { getUserInfo } from '@/api/personal'
+    import { removeToken } from '@/utils/auth'
     export default {
         name: 'detail',
         data () {
@@ -25,7 +27,10 @@
             }
         },
         methods:{
-
+            logout:function () {
+                removeToken()
+                this.$router.push('HomeTab')
+            }
         },
         mounted:function () {
             getUserInfo()
