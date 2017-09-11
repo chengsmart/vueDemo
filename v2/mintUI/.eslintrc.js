@@ -20,6 +20,8 @@ module.exports = {
         'quotes': [
             'error',
             'single'
-        ]
+        ],
+        // enforce consistent indentation
+        indent: ['error', 4, {SwitchCase: 1}],
     }
 }
