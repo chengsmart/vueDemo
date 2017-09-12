@@ -30,9 +30,10 @@
     }
 </script>
 
-<style scoped>
-    .home { text-align: center;}
-    a {
-        color: #42b983;
+<style scoped lang="less">
+    .home {
+        text-align: center;
+        h1 { font-size: 24px;}
+        a { text-decoration: none;}
     }
 </style>
