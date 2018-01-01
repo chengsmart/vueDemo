@@ -1,0 +1,11 @@
+{
+    "list": [
+        { "id": 1, "title": "西红柿", "price": "2.00" },
+        { "id": 2, "title": "马铃薯", "price": "1.50" }
+    ],
+    "item": [
+        { "id": 1, "title": "西红柿", "price": "2.00", "from": "河北省" },
+        { "id": 2, "title": "马铃薯", "price": "1.50", "from": "天津市" }
+    ],
+    "userInfo": { "name": "Smart","age":26 }
+}
