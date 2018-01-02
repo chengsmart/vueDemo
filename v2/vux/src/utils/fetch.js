@@ -18,7 +18,6 @@ service.interceptors.response.use(
         // TODO 请求接收后，停止等待动画
         // code为非0是抛错
         const res = response.data;
-        console.log(res);
         if (res.status) {
             Msg({
                 title:'业务逻辑错误',

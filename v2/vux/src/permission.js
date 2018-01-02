@@ -11,8 +11,6 @@ import 'nprogress/nprogress.css'// Progress 进度条样式
 router.beforeEach((to, from, next) => {
     NProgress.start(); // 开始过渡条动画
     // TODO 添加登录状态判断，跳转到到登录页面
-    console.log(to);
-    console.log(from);
     next();
 });
 

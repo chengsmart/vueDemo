@@ -1,6 +1,6 @@
 <template>
     <div class="hello">
-        <h1>{{ msg }}</h1>
+        <x-header :left-options="{backText:'返回'}" :title="msg"></x-header>
         <ul>
             <list-item :obj="item" v-for="item in list"></list-item>
         </ul>
@@ -9,7 +9,7 @@
 
 <script>
     import listItem from '../../components/ListItem'
-    import {Group} from 'vux'
+    import {Group, XHeader} from 'vux'
     import { getList } from '@/api/list'
 
     export default {
@@ -20,18 +20,14 @@
                 list:[]
             }
         },
-        components: {listItem,Group},
+        components: {listItem,Group,XHeader},
         methods: {
-            queryList:function () {
+            queryList () {
                 getList()
                     .then(data => {
-                        console.log(data);
-//                        this.list = data;
                         data.map(item => {
                             this.list.push(item)
                         })
-//                        Array.prototype.push.apply(this.list,data);
-//                        console.log(this.list);
                     })
             }
         },

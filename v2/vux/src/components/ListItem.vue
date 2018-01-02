@@ -19,18 +19,10 @@
                 type: Object
             }
         },
-        methods: {
-//            queryList:function () {
-//                getList()
-//                    .then(data => {
-//                        console.log(data);
-//                        this.list.push(data)
-//                    })
-//            }
-        },
+        methods: { },
         mounted:function () {
-            console.log(this.info);
-            console.log(this.obj);
+//            console.log(this.info);
+//            console.log(this.obj);
         }
     }
 </script>
