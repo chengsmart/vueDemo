@@ -17,8 +17,10 @@
     "author": "",
     "license": "MIT",
     "dependencies": {
+        "axios": "^0.17.1",
         "fs-extra": "^4.0.1",
         "vue": "^2.4.3",
+        "vue-router": "^3.0.1",
         "weex-html5": "^0.4.1",
         "weex-vue-render": "^0.12.21"
     },
