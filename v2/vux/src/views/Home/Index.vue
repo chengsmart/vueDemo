@@ -5,6 +5,7 @@
         <h2>{{title}}</h2>
         <group>
             <cell-box :is-link="true" :link="nextPage">跳转到列表页</cell-box>
+            <cell-box :is-link="true" :link="tabsPage">跳转到tab页</cell-box>
         </group>
     </div>
 </template>
@@ -18,7 +19,8 @@
             return {
                 msg: 'Vue.js项目demo',
                 title: '基于vux框架',
-                nextPage:'list'
+                nextPage:'list',
+                tabsPage:'tab'
             }
         },
         components: {Group, CellBox, XHeader}

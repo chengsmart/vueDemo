@@ -4,6 +4,7 @@ import Empty from '@/views/404'
 import Home from '@/views/Home/Index'
 import List from '@/views/List/Index'
 import Detail from '@/views/Detail/Index'
+import Tab from '@/views/Tab/Index'
 
 Vue.use(Router);
 export default new Router({
@@ -24,6 +25,10 @@ export default new Router({
             path: '/detail',
             name: 'Detail',
             component: Detail
+        }, {
+            path: '/tab',
+            name: 'Tab',
+            component: Tab
         }, {
             path: '*',
             redirect: '/empty'
