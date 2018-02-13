@@ -1,0 +1,28 @@
+/**
+* 用于修改vux的样式
+* 仅适用于theme.less无法配置的情况，使用css强制覆盖
+*/
+
+body { background-color: #f6f6f6; line-height: 1.4; font-size:@tsl-font-normal; color: #333;}
+img { width: 100%; height: auto;}
+ul,ol,dl { list-style: none;}
+
+h1,h2,h3,h4,h5,h6,p { font-weight: normal;}
+h1,.h1 {font-size:@tsl-font-h1;}
+h2,.h2 {font-size:@tsl-font-h2;}
+h3,.h3 {font-size:@tsl-font-h3;}
+h4,.h4 {font-size:@tsl-font-h4;}
+h5,.h5 {font-size:@tsl-font-h5;}
+h6,.h6 {font-size:@tsl-font-h6;}
+p {font-size:@tsl-font-normal;}
+
+a { color: @tsl-color-main;}
+
+.clearfix {.tsl-utils-clearfix()}
+.pull-right { float: right !important; }
+.pull-left { float: left !important; }
+.hide { display: none !important; }
+.show { display: block !important; }
+
+.keep-inline { overflow: hidden; width: 100%; white-space: nowrap; text-overflow: ellipsis; -ms-text-overflow: ellipsis; word-break: keep-all; -ms-word-break: keep-all; }
+.keep-twoline { display: -webkit-box; display: -moz-box; overflow: hidden; width: 100%; height: 40px; line-height: 20px; white-space: normal; word-break: break-all; -webkit-line-clamp: 2; -moz-line-clamp: 2; -webkit-box-orient: vertical; -moz-box-orient: vertical; }

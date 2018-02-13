@@ -1,0 +1,75 @@
+/**
+* 用于定于全局变量
+* 包括但不局限于 颜色 字号 边距 utils
+*/
+
+//color
+@tsl-color-main: #fe4365;
+@tsl-color-assist: #FFA107;
+@tsl-color-emphasize: #F73939;
+@tsl-color-price: #E40404;
+@tsl-color-white:#fff;
+
+//font-size
+@tsl-font-h1:24px;
+@tsl-font-h2:20px;
+@tsl-font-h3:18px;
+@tsl-font-h4:16px;
+@tsl-font-h5:15px;
+@tsl-font-h6:12px;
+
+@tsl-font-normal:14px;
+
+@tsl-font-points:50px;
+@tsl-font-coupon:48px;
+@tsl-font-small:10px;
+
+//边距
+@tsl-range:5px;
+
+//utils
+.tsl-utils-clearfix() {
+  &:before,
+  &:after {
+    content: " "; // 1
+    display: table; // 2
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+// Box sizing
+.tsl-utils-box-sizing(@boxmodel) {
+  -webkit-box-sizing: @boxmodel;
+  -moz-box-sizing: @boxmodel;
+  box-sizing: @boxmodel;
+}
+
+.tsl-text-overflow() {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.tsl-img-responsive(@display: block) {
+  display: @display;
+  max-width: 100%;
+  border: none;
+  height: auto;
+  -webkit-transition: opacity 300ms ease;
+  pointer-events: none;
+  -webkit-user-select: none;
+  text-decoration: none;
+}
+
+.tsl-text-break(){
+  white-space: normal;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.tsl-border-radius(@radius) {
+  -webkit-border-radius: @radius;
+  border-radius: @radius;
+}
