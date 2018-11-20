@@ -6,14 +6,19 @@ import VueRouter from 'vue-router'
 import App from './App'
 import router from './router'
 import '@/permission'
+import  { ToastPlugin } from 'vux'
+
+Vue.use(ToastPlugin);
 Vue.use(VueRouter);
 
+const fetch = require('./utils/fetch');
+fetch(Vue);
+
 FastClick.attach(document.body);
-
 Vue.config.productionTip = false;
-
 /* eslint-disable no-new */
 new Vue({
-  router,
-  render: h => h(App)
-}).$mount('#app-box')
+    router,
+    render: h => h(App)
+}).
+$mount('#app-box')

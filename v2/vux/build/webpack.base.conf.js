@@ -1,7 +1,7 @@
 'use strict'
 const path = require('path')
 const utils = require('./utils')
-const config = require('../config')
+const config = require('../config/index')
 const vueLoaderConfig = require('./vue-loader.conf')
 const vuxLoader = require('vux-loader')
 
@@ -30,6 +30,16 @@ let webpackConfig = {
   },
   module: {
     rules: [
+      ...(config.dev.useEslint? [{
+        test: /\.(js|vue)$/,
+        loader: 'eslint-loader',
+        enforce: 'pre',
+        include: [resolve('src'), resolve('test')],
+        options: {
+          formatter: require('eslint-friendly-formatter'),
+          emitWarning: !config.dev.showEslintErrorsInOverlay
+        }
+      }] : []),
       {
         test: /\.vue$/,
         loader: 'vue-loader',
@@ -70,5 +80,8 @@ let webpackConfig = {
 
 
 module.exports = vuxLoader.merge(webpackConfig, {
-  plugins: ['vux-ui', 'progress-bar', 'duplicate-style']
+  plugins: ['vux-ui', 'progress-bar', 'duplicate-style',{
+      name: 'less-theme',// 增加vux的主题配色设置
+      path: 'src/assets/styles/theme.less'
+  }]
 })

@@ -1,4 +1,4 @@
-# vux
+# b2bapp
 
 > A Vue.js project
 
